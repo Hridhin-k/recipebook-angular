@@ -11,6 +11,8 @@ import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { ShoppingserviceService } from './shopping-list/shoppingservice.service';
+import { RecipeserviceService } from './recipes/recipeservice.service';
 
 
 
@@ -31,7 +33,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ShoppingserviceService, RecipeserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
