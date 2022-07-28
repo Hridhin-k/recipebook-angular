@@ -1,17 +1,15 @@
 <div class="row" id="recipe-detail">
   <div class="col-xs-12">
-    <img
-      src='https://www.tasteofhome.com/wp-content/uploads/2018/01/Cajun-Chicken-Lasagna_EXPS_HSCBZ19_129791_E07_12_2b-9.jpg?fit=700,1024'
-      alt="">
+    <img src='{{recipe.imagepath}}' alt="{{recipe.name}}" style="max-height:15cm;max-width:20cm;">
   </div>
 
   <div class="row">
     <div class="col-xs-12"><br>
-      <h2><u>LASAGNA</u></h2>
+      <h2 style="color:rgb(228, 228, 228);text-align: center;"><u>{{recipe.name}}</u></h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-10">
       <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Manage Recipe
@@ -29,31 +27,16 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <u>DESCRIPTION</u><br><b>
-            Lasagna is a wide, flat sheet of pasta. Lasagna can refer to either the type of noodle or to the typical
-            lasagna dish which is a dish made with several layers of lasagna sheets with sauce and other ingredients,
-            such
-            as meats and cheese, in between the lasagna noodles.</b>
+          <u style="color:ghostwhite;text-align: center;">DESCRIPTION</u><br><b>
+            <p style="color:ghostwhite;text-align: center;">{{recipe.description}}</p>
+          </b>
         </div>
 
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <u>INGREDIENTS</u>
-          <pre><b>
-          1  Eggplants(3-4 medium or 1-2 large, sliced)
-          2  Tomato (1-2, sliced)
-          3  Parsley (a handful, chopped)
-          4  Garlic (5-6 cloves, optional)
-          5  Marinara Sauce (1 cup)
-          6  Ricotta Cheese (3/4 cup)
-          7  Mozzarella Cheese (3/4 cup)
-          8  Parmesan Cheese (1/2 cup)
-          9  Egg (1)
-          10 Salt
-          11 Ground Pepper
-          12 Olive Oil</b>
-</pre>
+          <u style="color:ghostwhite;text-align: center;">INGREDIENTS</u>
+
 
 
         </div>
