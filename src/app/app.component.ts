@@ -7,12 +7,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'angulartwo';
-  loadedFeature = 'recipe';
-  onNavigate(feature: string) {
-    console.log('test2', feature)
-    this.loadedFeature = feature;
-
-
-  }
-
 }
+
+
+
+
+
+
+
+

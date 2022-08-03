@@ -13,9 +13,9 @@ export class ShoppingserviceService {
   getIngredients() {
     return this.ingredients;
   }
-  onIngredientAdded(ingredient: Ingredient) {
+  onIngredientAdded(newIngredient: Ingredient) {
 
-    this.ingredients.push(ingredient)
+    this.ingredients.push(newIngredient)
 
   }
   constructor() { }
