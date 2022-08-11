@@ -9,10 +9,15 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { RoutingComponants } from './app-routing.module';
-
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShoppingserviceService } from './shopping-list/shoppingservice.service';
+import { RecipeserviceService } from './recipes/recipeservice.service';
+import { AuthComponent } from './auth/auth/auth.component';
 
 
 @NgModule({
@@ -24,14 +29,19 @@ import { RoutingComponants } from './app-routing.module';
     RoutingComponants,
     RecipeItemComponent,
     ShoppingEditComponent,
+    RecipeEditComponent,
+    RecipeStartComponent,
+    AuthComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ShoppingserviceService, RecipeserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 <div class="row" id="recipe-list-box">
   <div class="col-xs-12">
-    <a class="list-group-item clearfix" (click)="recipeSelect()">
+    <a class="list-group-item clearfix" [routerLink]="[index]" routerLinkActive="active">
       <div class=pull-left>
         <h5 class="list-group-item-heading">{{recipe.name}}</h5>
         <!-- <p class="list-group-item-text">{{recipe.description}}</p> -->
