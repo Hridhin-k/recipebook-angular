@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShoppingserviceService } from './shopping-list/shoppingservice.service';
 import { RecipeserviceService } from './recipes/recipeservice.service';
 import { AuthComponent } from './auth/auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loadingspinner/loading-spinner/loading-spinner.component';
+
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { AuthComponent } from './auth/auth/auth.component';
     RecipeEditComponent,
     RecipeStartComponent,
     AuthComponent,
+    LoadingSpinnerComponent
+
 
   ],
   imports: [
