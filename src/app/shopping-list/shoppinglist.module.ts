@@ -1,0 +1,14 @@
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router";
+import { ShoppingEditComponent } from "./shopping-edit/shopping-edit.component";
+import { ShoppingListComponent } from "./shopping-list.component";
+
+@NgModule({
+  declarations: [ShoppingEditComponent,
+    ShoppingListComponent],
+  imports: [CommonModule, FormsModule, RouterModule.forChild([{ path: 'shoppinglist', component: ShoppingListComponent }])],
+  exports: [ShoppingListComponent, ShoppingEditComponent]
+})
+export class ShoppingListModule { }

@@ -5,6 +5,7 @@ import { Recipe } from './recipe.model';
 import { Subject } from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,18 +20,26 @@ export class RecipeserviceService {
   //   new Recipe('LASAGNA', 'Lasagna is a wide, flat sheet of pasta. Lasagna can refer to either the type of noodle or to the typical lasagna dish which is a dish made with several layers of lasagna sheets with sauce and other ingredients, such as meats and cheese, in between the lasagna noodles.', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/Cajun-Chicken-Lasagna_EXPS_HSCBZ19_129791_E07_12_2b-9.jpg?fit=700,1024', [new Ingredient('pasta', 1), new Ingredient("cheese", 1)]),
   //   new Recipe('BBQ CHICKEN', 'Barbecue chicken consists of chicken parts or entire chickens that are barbecued, grilled or smoked. There are many global and regional preparation techniques and cooking styles. Barbecue chicken is often seasoned or coated in a spice rub, barbecue sauce, or both.', 'https://assets.epicurious.com/photos/5732526f1877f76a0e20831c/1:1/w_1920,c_limit/EP_05102016_PeruvianStyleRoastChicken_recipe_.jpg', [new Ingredient('chicken', 1), new Ingredient("bbq sause", 1)]),
   // ];
-  private recipes: Recipe[] = [];
+  private recipes: Recipe[]
+
   constructor(private list: ShoppingserviceService) { }
   setRecipes(recipes: Recipe[]) {
+
+    console.log(recipes, ' setRecipes(recipes:)')
+
+
     this.recipes = recipes;
-    console.log(this.recipes, "set recipe function")
+    console.log(this.recipes, 'this.recipes')
+
     this.recipesChanged.next(this.recipes.slice());
   }
   getRecipes() {
-    return this.recipes.slice();
+    return this.recipes.slice();//.slice()
   }
   getRecipe(index: number) {
+
     return this.recipes[index];
+    console.log('hello')
   }
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.list.addIngredients(ingredients);
@@ -43,7 +52,6 @@ export class RecipeserviceService {
 
   updateRecipe(index: number, newRecipe: Recipe) {
     this.recipes[index] = newRecipe;
-    console.log(newRecipe, 'edit image check')
     this.recipesChanged.next(this.recipes.slice());
   }
 
