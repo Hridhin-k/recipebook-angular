@@ -13,7 +13,7 @@ export class RecipesComponent implements OnInit {
   ngOnInit(): void {
     this.dataStorage.fetchRecipes().subscribe()
     this.recipeService.recipesChanged.subscribe((recipe: Recipe[]) => { this.selectedRecipe = recipe })
-
+    console.log('recipe component triggerd')
   }
 
 }

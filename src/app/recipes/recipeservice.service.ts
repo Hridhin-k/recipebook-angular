@@ -39,7 +39,7 @@ export class RecipeserviceService {
   getRecipe(index: number) {
 
     return this.recipes[index];
-    console.log('hello')
+
   }
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.list.addIngredients(ingredients);

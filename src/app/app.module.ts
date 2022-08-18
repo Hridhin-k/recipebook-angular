@@ -9,7 +9,7 @@ import { ShoppingserviceService } from './shopping-list/shoppingservice.service'
 import { RecipeserviceService } from './recipes/recipeservice.service';
 import { LoadingSpinnerComponent } from './shared/loadingspinner/loading-spinner/loading-spinner.component';
 import { AuthInterceptorService } from './auth/auth/auth-intrecepter-service';
-//import { RecipesModule } from './recipes/recipes.module';
+import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shoppinglist.module';
 import { AuthModule } from './auth/auth/auth.module';
 
@@ -28,7 +28,7 @@ import { AuthModule } from './auth/auth/auth.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // RecipesModule,
+    RecipesModule,
     ShoppingListModule,
     AuthModule
   ],
