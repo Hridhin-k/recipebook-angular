@@ -3,8 +3,9 @@
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-sm-12">
-          <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid">Save</button>
-          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+          <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid"
+            style="margin: 10px;">Save</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()" style="margin: 10px;">Cancel</button>
         </div>
       </div>
       <div class="row">
@@ -23,9 +24,9 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-top: 10px;">
         <div class="col-sm-12">
-          <img [src]="imagepath.value" class="img-responsive">
+          <img [src]="imagepath.value" class="img-responsive" style="height:200px">
         </div>
       </div>
       <div class="row">

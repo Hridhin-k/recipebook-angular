@@ -1,11 +1,11 @@
 <div class="row" id="recipe-detail">
   <div class="col-xs-12">
-    <img [src]='recipe?.imagepath' alt='{{recipe?.name}}' style="max-height: 300px;">
+    <img [src]='recipe.imagepath' alt='{{recipe.name}}' style="max-height: 300px;">
   </div>
 
   <div class="row">
     <div class="col-xs-12"><br>
-      <h2 style="color:rgb(228, 228, 228);text-align: center;"><u>{{recipe?.name}}</u></h2>
+      <h2 style="color:rgb(228, 228, 228);text-align: left;"><u>{{recipe?.name}}</u></h2>
     </div>
   </div>
   <div class="row">
@@ -35,7 +35,5 @@
               {{ ingredient.name }} - {{ ingredient.amount }}
             </li>
           </ul>
-
-
         </div>
       </div>
