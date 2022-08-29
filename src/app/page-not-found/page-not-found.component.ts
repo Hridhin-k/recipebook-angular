@@ -13,4 +13,3 @@ export class PageNotFoundComponent implements OnInit {
   }
 
 }
-//page-not-found.component.html
