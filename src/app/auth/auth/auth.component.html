@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div clas="col-xs-12 col-md-10 col-md-offset-3">
     <div class="alert alert-danger" *ngIf="error">
       <p>{{error}}</p>
@@ -6,7 +6,7 @@
     <div *ngIf="isLoading" style="text-align: center;">
       <app-loading-spinner></app-loading-spinner>
     </div>
-    <form #AuthForm="ngForm" (ngSubmit)="onSubmit(AuthForm)" *ngIf="!isLoading">
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
       <div class="form-group">
         <label for="exampleInputEmail1" style="color:white ;">Email address</label>
         <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" ngModel
@@ -16,10 +16,39 @@
         <label for="exampleInputPassword1" style="color:white">Password</label>
         <input type="password" class="form-control" placeholder="Password" ngModel name="password" required>
       </div><br>
-      <button type="submit" class="btn btn-primary" [disabled]="!AuthForm.valid">{{isLoggedIn ?
+      <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">{{isLoggedIn ?
         "Login":"SignUp"}}</button>|
       <button type="button" class="btn btn-primary" (click)="onSwitchMode()">Switch to {{isLoggedIn ?
         "Signup":"Login"}}</button>
+    </form>
+  </div>
+</div> -->
+
+<ng-template appPlaceholder></ng-template>
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <div *ngIf="isLoading" style="text-align: center;">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+      <div class="form-group">
+        <label for="email" style="color:white ;">E-Mail</label>
+        <input type="email" id="email" class="form-control" ngModel name="email" required email style="width:1000px;" />
+      </div>
+      <div class="form-group">
+        <label for="password" style="color:white">Password</label>
+        <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6"
+          style="width:1000px;" />
+      </div>
+      <div>
+        <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">
+          {{ isLoginMode ? 'Login' : 'Sign Up' }}
+        </button>
+        |
+        <button class="btn btn-primary" (click)="onSwitchMode()" type="button">
+          Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
+        </button>
+      </div>
     </form>
   </div>
 </div>
