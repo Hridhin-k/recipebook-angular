@@ -14,6 +14,8 @@ export class RecipeItemComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log(this.recipe, 'imageclick')
+    console.log(this.index, 'imageindex')
   }
 
 }  

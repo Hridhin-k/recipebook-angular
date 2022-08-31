@@ -7,19 +7,19 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
 import * as fromApp from './store/app.reducer';
-
 import { environment } from '../environments/environment';
 import { RecipeEffects } from './recipes/store/recipe.effects';
 import { AuthEffects } from './auth/auth/store/auth.effects';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+//import { NgxImgZoomModule } from 'ngx-img-zoom'
+
+
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, PageNotFoundComponent],
@@ -32,9 +32,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     StoreDevtoolsModule.instrument({ logOnly: environment.production }),
     StoreRouterConnectingModule.forRoot(),
     SharedModule,
-    CoreModule
+    CoreModule,
+    //NgxImgZoomModule
   ],
-  bootstrap: [AppComponent]
-  // providers: [LoggingService]
+  bootstrap: [AppComponent],
+  //providers: [NgxImgZoomModule]
 })
 export class AppModule { }

@@ -1,10 +1,18 @@
 <div class="row" id="recipe-detail">
   <div class="col-xs-12">
-    <img [src]='recipe.imagepath' alt='{{recipe.name}}' style="height: 300px; max-width: 300px;">
+
+    <div>
+      <app-imagepreview [image]="[recipe.imagepath]"></app-imagepreview><br>
+    </div>
+    <!-- <input type="range" min="1" max="10" value="1" step="0.1" id="zoomer" #range (change)="changed(range.value)"
+        style="width: 500px;background-color: rgb(0, 146, 34);"> -->
+
+
   </div>
 
   <div class="row">
     <div class="col-xs-12"><br>
+
       <h2 style="color:rgb(228, 228, 228);text-align: left;"><u>{{recipe.name}}</u></h2>
     </div>
   </div>
@@ -20,20 +28,24 @@
           <li><a style="cursor: pointer;" (click)="onDeleteRecipe()">DELETE RECIPE</a></li>
         </ul>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <u style="color:ghostwhite;text-align: center;">DESCRIPTION</u><br><b>
-            <p style="color:ghostwhite;text-align: center;">{{recipe.description}}</p>
-          </b>
-        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <u style="color:ghostwhite;text-align: center;">DESCRIPTION</u><br><b>
+        <p style="color:ghostwhite;text-align: center;">{{recipe.description}}</p>
+      </b>
+    </div>
 
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <ul class="list-group">
-            <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients"><b>
-                {{ ingredient.name }} - {{ ingredient.amount }}
-              </b> </li>
-          </ul>
-        </div>
-      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients"><b>
+            {{ ingredient.name }} - {{ ingredient.amount }}
+          </b> </li>
+      </ul>
+
+    </div>
+  </div>

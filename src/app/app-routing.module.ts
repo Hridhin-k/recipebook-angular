@@ -2,6 +2,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   {
     path: '**',
     component: PageNotFoundComponent,
-  },
+  }
+
 ];
 @NgModule({
   imports: [

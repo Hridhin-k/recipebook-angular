@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "../auth/auth/auth-guard";
 import { RecipeDetailsComponent } from "./recipe-details/recipe-details.component";
 import { RecipeEditComponent } from "./recipe-edit/recipe-edit.component";
+
 import { RecipeResolverService } from "./recipe-resolver.service";
 import { RecipeStartComponent } from "./recipe-start/recipe-start.component";
 import { RecipesComponent } from "./recipes.component";
@@ -23,9 +24,11 @@ const routes: Routes = [
         path: ':id/edit',
         component: RecipeEditComponent,
         resolve: [RecipeResolverService]
-      }
+      },
+
     ]
   }
+
 ];
 
 @NgModule({
