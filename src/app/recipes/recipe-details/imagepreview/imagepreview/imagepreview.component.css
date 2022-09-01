@@ -1,3 +1,25 @@
 div {
   text-align: center;
 }
+
+.imagepreview {
+  overflow: hidden;
+}
+
+::ng-deep .ngxImageZoomContainer>img {
+  max-width: 650px;
+  max-height: 650px;
+  overflow: hidden;
+
+}
+
+::ng-deep .ngxImageZoomThumbnail>img {
+  max-width: 650px;
+  max-height: 650px;
+  overflow: hidden;
+}
+
+.toggle {
+  width: 450px;
+  color: blueviolet
+}
