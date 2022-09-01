@@ -14,12 +14,12 @@ div {
 }
 
 ::ng-deep .ngxImageZoomThumbnail>img {
-  max-width: 650px;
-  max-height: 650px;
+  max-width: 450px;
+  max-height: 450px;
   overflow: hidden;
 }
 
 .toggle {
   width: 450px;
-  color: blueviolet
+
 }
