@@ -6,20 +6,23 @@ div {
   overflow: hidden;
 }
 
-::ng-deep .ngxImageZoomContainer>img {
+
+/* ::ng-deep .ngxImageZoomContainer>img {
   max-width: 650px;
   max-height: 650px;
   overflow: hidden;
 
 }
 
-::ng-deep .ngxImageZoomThumbnail>img {
-  max-width: 450px;
-  max-height: 450px;
-  overflow: hidden;
-}
 
-.toggle {
-  width: 450px;
+::ng-deep .ngxImageZoomThumbnail>img {
+  max-width: 650px;
+  max-height: 650px;
+  overflow: hidden;
+} */
+
+.slider {
+  width: 400px;
+  text-align: left;
 
 }

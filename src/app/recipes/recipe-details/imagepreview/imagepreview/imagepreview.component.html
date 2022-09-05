@@ -1,28 +1,15 @@
 <div>
-
-  <!-- <angular-image-viewer [src]="image" [(config)]="config" [screenHeightOccupied]='0'
-      (customImageEvent)="handleEvent($event)"></angular-image-viewer>
-  </div><br>
-  <input type="range" min="1" max="10" value="1" step="0.1" id="zoomer" #range (change)="changed(range.value)"
-    style="width: 500px;"> -->
   <div class=" imagepreview">
-    <div class="imagecontainer" [ngStyle]="{'transform': 'scale(' +rangevalue+ ')'}">
-
-      <lib-ngx-image-zoom [thumbImage]="image" [fullImage]="image" [magnification]="1" [enableScrollZoom]="true"
-        [enableLens]="false" [lensWidth]="200" [zoomMode]="'toggle-click'">
-      </lib-ngx-image-zoom><br>
-
+    <div class="imagecontainer" [ngStyle]="{'transform': 'scale('+rangevalue+ ' )'}"
+      style="max-width:650px; max-height:650px;">
+      <div (change)="wheel(slidervalue)">
+        <lib-ngx-image-zoom [thumbImage]="image" [fullImage]="image" [magnification]="1" [enableScrollZoom]="true"
+          [enableLens]="false" [lensWidth]="200" [zoomMode]="'toggle'" [maxZoomRatio]="5" #slidervalue>
+        </lib-ngx-image-zoom><br>
+      </div>
     </div>
   </div>
-  <div class="">
-    <input type="range" min="1" max="5" value="0.1" step="0.1" id="zoomer" #range (change)="changed(range.value)"
-      class="toggle">
-  </div>
 
-
-
-
-
-  <!-- <lib-ngx-image-zoom [thumbImage]="image" [fullImage]="image" [magnification]="1" [enableScrollZoom]="true"
-    [enableLens]="true" [lensWidth]="200" [zoomMode]="'toggle'">
-  </lib-ngx-image-zoom> -->
+  <input type="range" min="1" max="5" value={{rangevalue}} step="0.1" id="zoomer" #range (change)="changed(range.value)"
+    class="slider">
+</div>

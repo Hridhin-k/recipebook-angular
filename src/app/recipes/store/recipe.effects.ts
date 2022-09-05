@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Actions, createEffect, Effect, ofType } from "@ngrx/effects";
+import { Actions, createEffect, ofType } from "@ngrx/effects";
 
 import * as RecipesActions from './recipe.action'
 import { Recipe } from "../recipe.model";
