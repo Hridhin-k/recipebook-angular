@@ -4,13 +4,14 @@
       style="max-width:650px; max-height:650px;">
       <div (mousewheel)="wheel(slidervalue)">
         <lib-ngx-image-zoom [thumbImage]="image" [fullImage]="image" [magnification]="1" [enableScrollZoom]="true"
-          [enableLens]="false" [lensWidth]="200" [zoomMode]="'toggle'" [maxZoomRatio]="5" #slidervalue>
+          [enableLens]="false" [lensWidth]="200" [zoomMode]="'toggle'" [maxZoomRatio]="5" #slidervalue
+          [scrollStepSize]="0.05">
         </lib-ngx-image-zoom><br>
       </div>
     </div>
   </div>
   <div style="margin:10px;background-color: rgb(95, 106, 101);">
-    <input type="range" min="1" max="5" [value]="gridvalue" step="0.1" id="zoomer" #range
+    <input type="range" min="1" max="5" [value]="gridvalue" step="0.05" id="zoomer" #range
       (change)="changed(range.value)" class="slider">
   </div>
 </div>

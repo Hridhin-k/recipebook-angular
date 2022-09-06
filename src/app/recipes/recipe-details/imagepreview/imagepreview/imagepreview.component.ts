@@ -38,7 +38,7 @@ export class ImagepreviewComponent {
   wheel(event) {
 
     this.gridvalue = event.magnification
-    //console.log(event.zoomPosition, 'image selector events')
+    console.log(event, 'image selector events')
   }
 
 
