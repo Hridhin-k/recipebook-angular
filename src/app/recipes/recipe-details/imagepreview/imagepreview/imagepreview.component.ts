@@ -22,11 +22,11 @@ export class ImagepreviewComponent {
   imageIndexOne = 0;
   config: ImageViewerConfig = { customBtns: [{ name: 'print', icon: 'fa fa-print' }, { name: 'link', icon: 'fa fa-link' }] };
   handleEvent(event: CustomImageEvent) {
-    console.log(`${event.name} has been click on img ${event.imageIndex + 1}`);
+
 
     switch (event.name) {
       case 'print':
-        console.log('run print logic');
+
         break;
     }
   }
@@ -38,7 +38,7 @@ export class ImagepreviewComponent {
   wheel(event) {
 
     this.gridvalue = event.magnification
-    console.log(event.magnification, 'image selector events')
+    //console.log(event.zoomPosition, 'image selector events')
   }
 
 

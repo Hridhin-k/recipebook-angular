@@ -9,6 +9,8 @@
       </div>
     </div>
   </div>
-  <input type="range" min="1" max="5" [value]="gridvalue" step="0.1" id="zoomer" #range (change)="changed(range.value)"
-    class="slider">
+  <div style="margin:10px;background-color:rgb(197, 197, 255) ;">
+    <input type="range" min="1" max="5" [value]="gridvalue" step="0.1" id="zoomer" #range
+      (change)="changed(range.value)" class="slider">
+  </div>
 </div>
