@@ -2,14 +2,13 @@
   <div class=" imagepreview">
     <div class="imagecontainer" [ngStyle]="{'transform': 'scale('+rangevalue+ ' )'}"
       style="max-width:650px; max-height:650px;">
-      <div (change)="wheel(slidervalue)">
+      <div (mousewheel)="wheel(slidervalue)">
         <lib-ngx-image-zoom [thumbImage]="image" [fullImage]="image" [magnification]="1" [enableScrollZoom]="true"
           [enableLens]="false" [lensWidth]="200" [zoomMode]="'toggle'" [maxZoomRatio]="5" #slidervalue>
         </lib-ngx-image-zoom><br>
       </div>
     </div>
   </div>
-
-  <input type="range" min="1" max="5" value={{rangevalue}} step="0.1" id="zoomer" #range (change)="changed(range.value)"
+  <input type="range" min="1" max="5" [value]="gridvalue" step="0.1" id="zoomer" #range (change)="changed(range.value)"
     class="slider">
 </div>

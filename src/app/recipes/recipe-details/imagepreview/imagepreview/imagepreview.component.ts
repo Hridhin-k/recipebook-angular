@@ -16,8 +16,9 @@ export class ImagepreviewComponent {
   //images: any = ['https://live.staticflickr.com/65535/48588252551_16d7043332_h.jpg']
   myThumbnail: string
   myFullresImage: string
-  x: number
-  y: number
+  gridvalue: number
+
+
   imageIndexOne = 0;
   config: ImageViewerConfig = { customBtns: [{ name: 'print', icon: 'fa fa-print' }, { name: 'link', icon: 'fa fa-link' }] };
   handleEvent(event: CustomImageEvent) {
@@ -31,12 +32,13 @@ export class ImagepreviewComponent {
   }
   changed(event) {
     this.rangevalue = event
-    console.log(this.rangevalue, 'this is from preview component')
+    //console.log(this.rangevalue, 'this is from preview component')
   }
 
   wheel(event) {
-    console.log(event, 'image selector events')
-    this.rangevalue = event.magnification
+
+    this.gridvalue = event.magnification
+    console.log(event.magnification, 'image selector events')
   }
 
 
