@@ -1,5 +1,5 @@
 <div>
-  <div class=" imagepreview">
+  <div class=" imagepreview" style="border-style: solid;border-width: 10px;border-color: rgb(95, 106, 101);">
     <div class="imagecontainer" [ngStyle]="{'transform': 'scale('+rangevalue+ ' )'}"
       style="max-width:650px; max-height:650px;">
       <div (mousewheel)="wheel(slidervalue)">
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <div style="margin:10px;background-color:rgb(197, 197, 255) ;">
+  <div style="margin:10px;background-color: rgb(95, 106, 101);">
     <input type="range" min="1" max="5" [value]="gridvalue" step="0.1" id="zoomer" #range
       (change)="changed(range.value)" class="slider">
   </div>
